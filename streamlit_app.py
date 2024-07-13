@@ -29,7 +29,7 @@ def lottie_loadurl(url):
     return r.json() 
 
 lottie_coding = lottie_loadurl("https://lottie.host/0ffaf8de-8f5e-406d-93ad-27a60744a513/SXc4XS7gGN.json")
-Image_random = Image.open("images\istockphoto-918259136-612x612.jpg")
+#Image_random = Image.open("images\istockphoto-918259136-612x612.jpg")
 
 if the_selected_menu == "Home":
     st.container()

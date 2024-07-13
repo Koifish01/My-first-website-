@@ -70,5 +70,5 @@ elif the_selected_menu == "Notes":
 
 with st.container():
     st.write("---")
-    st.write("Developed by Rafiq!:brain:")
-    st.write("all right reserved ehehe")
+    st.write("Developed by Rafiq!:brain:  all right reserved ehehe")
+

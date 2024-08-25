@@ -3,6 +3,7 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_option_menu import option_menu
+import os
 
 optionsez= ["Option 1","Option 2","Option 3"]
 
@@ -29,8 +30,12 @@ def lottie_loadurl(url):
     return r.json() 
 ####################################  IMAGE SECTION !!!!
 lottie_coding = lottie_loadurl("https://lottie.host/0ffaf8de-8f5e-406d-93ad-27a60744a513/SXc4XS7gGN.json")
+
+root_dir = os.path.dirname(os.path.abspath(__file__))
+
 #Image_random = Image.open("images\istockphoto-918259136-612x612.jpg")
-Image_petra = Image.open("Petra101.jpg")
+Image_petra = Image.open(os.path.join(root_dir, "Petra101.jpg"))
+#Image_petra = Image.open("Petra101.jpg")
 Image_cat = Image.open("cat101.jpg")
 Image_huh = Image.open("gasp101.jpg")
 Image_quotes1 = Image.open("platoque101.jpg")
@@ -51,7 +56,7 @@ Image_machu101 = Image.open("machu.jpg")
 if the_selected_main_bar == "Home":  
     selected_sub = option_menu(
             menu_title=None,
-            options=["Home", "Why Learn", "Our Wish", "About"],
+            options=["Home", "Why Learn", "Fun Fact", "About"],
             icons=["house-fill", "book-fill", "collection-play-fill", "sticky-fill"],
             orientation="horizontal",
             styles={
@@ -63,6 +68,7 @@ if the_selected_main_bar == "Home":
 else:
         selected_sub = None 
 if selected_sub == "Why Learn":
+    st.write("---")
     right_coll0, left_coll0 = st.columns(2)
     the_selected_main_bar = False
     with right_coll0:
@@ -72,9 +78,18 @@ if selected_sub == "Why Learn":
     with left_coll0:
         st.title("Learning Doesn't care about Your Age")
         st.image(Image_quote2, width=200)
-elif selected_sub == "Our Wish":
+elif selected_sub == "Fun Fact":
     the_selected_main_bar = False
-    st.subheader("Please Note That Knowledge Can Be Obtain Anywhere and Knowledge Didn't Even Choose An Age At All!!")
+    tab101,tab102,tab103,tab104= st.tabs(["Number 1","Number 2","Number 3","Number 4"])
+    tab101.subheader("Canada has more lakes than the rest of the world combined")
+    tab101.write("Canada, known for its natural beauty, is home to over 2 million lakes. These account for about 9% of its total land area")
+    tab102.subheader("Archaeology fun fact!!")
+    tab102.write("Most Archaeologist use Radiocarbon Dating which is Carbon-14 taht useful for dating fossils of relatively recent origin ")
+    tab103.subheader("In Ancient Mesopotamia")
+    tab103.write("---")
+    tab103.write(" king Nabonidus which is the Neo-Babylonian Empire, c. 550 BCE, who is thus known as the first archaeologist.")
+    tab104.subheader("Antarctica is the driest, windiest, highest, and coldest continent.")
+    tab104.write("Antarctica, primarily known for its icy landscape, holds extreme records. It’s the driest continent, receiving only 200 mm of precipitation per year on average. It’s also the windiest, with winds reaching up to 320 km/h.")
 elif selected_sub == "About":
     the_selected_main_bar = False 
     st.title("About This Website")
@@ -99,6 +114,7 @@ if the_selected_main_bar == "Home":
 
 elif the_selected_main_bar == "Contents":
     st.title("Wonders of The World")
+    st.write("---")
     left_collum2,middle_collum2,right_collum2= st.columns(3)
     with left_collum2:
         st.subheader("Location 1")
@@ -141,6 +157,7 @@ elif the_selected_main_bar == "Contents":
 elif  the_selected_main_bar == "Local Heritage":
     st.container()
     st.title("UNESCO certified World Heritage Sites in Malaysia")
+    st.write("---")
     left_collum1,middle_collum1,right_collum1 = st.columns(3)
     with left_collum1:
         st.subheader("Location 1")
@@ -168,18 +185,24 @@ elif  the_selected_main_bar == "References":
         st.title("Further Reading")
         st.write("Youtube Stuff")
         st.write("[YouTube >](https://www.youtube.com/#!)")
-        tab1,tab2 = st.tabs(["Link1","Link2"])
+        tab1,tab2,tab3= st.tabs(["Link 1","Link 2","Links 3"])
         # Tab 1 Hehe
         tab1.write("https://education.nationalgeographic.org/resource/great-wall-china/")# Link TO Those
         tab1.write("https://www.tandfonline.com/doi/full/10.1080/10382046.2021.2001983#abstract")
         tab1.write("https://www.britannica.com/topic/Taj-Mahal")
         tab1.write("https://whc.unesco.org/en/list/252/")
+        tab1.write("https://whc.unesco.org/en/list/1223")
+        tab1.write("https://travelationship.com/george-town-penang-malaysia-know-before-you-go/")
         # TAB 2 hehe
         tab2.write("https://www.britannica.com/place/George-Town-Malaysia")
         tab2.write("https://www.malaysia.travel/explore/the-historical-city-of-melaka")
         tab2.write("https://www.nationalgeographic.com/travel/article/secrets")
         tab2.write("https://www.britannica.com/topic/Taj-Mahal")
         tab2.write("https://whc.unesco.org/en/list/252/")
+        # TAB 3 EHe
+        tab3.write("https://en.wikipedia.org/wiki/Archaeology#:~:text=First%20instances%20of%20archaeology,-Excavations%20of%20Nabonidus&text=In%20Ancient%20Mesopotamia%2C%20a%20foundation,known%20as%20the%20first%20archaeologist.")
+        tab3.write("https://www.malaysia.travel/explore/the-historical-city-of-melaka")
+        tab3.write("https://www.amazingfactshome.com/fun-facts-about-geography/")
     with middle_collum:
         st.write("Hope You Learn Something While Visiting This Website")
         st_lottie(lottie_coding,height=200, width=300, speed=0.1, loop=True)

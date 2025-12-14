@@ -34,7 +34,7 @@ lottie_coding = lottie_loadurl("https://lottie.host/0ffaf8de-8f5e-406d-93ad-27a6
 root_dir = os.path.dirname(os.path.abspath(__file__))
 
 #Image_random = Image.open("images\istockphoto-918259136-612x612.jpg")
-Image_petra = Image.open(os.path.join(root_dir, "Petra101.jpg"))
+##Image_petra = Image.open(os.path.join(root_dir, "Petra101.jpg"))
 #Image_petra = Image.open("Petra101.jpg")
 Image_cat = Image.open("cat101.jpg")
 Image_huh = Image.open("gasp101.jpg")
@@ -237,5 +237,6 @@ if the_button:
 
 
     
+
 
 

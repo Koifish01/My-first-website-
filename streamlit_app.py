@@ -1,9 +1,12 @@
-import streamlit as st
+    import streamlit as st
 import requests 
 from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_option_menu import option_menu
 import os
+from PIL import Image 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMAGE_DIR = os.path.join(BASE_DIR, "myapp")
 
 optionsez= ["Option 1","Option 2","Option 3"]
 
@@ -237,6 +240,7 @@ if the_button:
 
 
     
+
 
 
 

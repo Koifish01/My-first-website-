@@ -34,27 +34,41 @@ def lottie_loadurl(url):
 ####################################  IMAGE SECTION !!!!
 lottie_coding = lottie_loadurl("https://lottie.host/0ffaf8de-8f5e-406d-93ad-27a60744a513/SXc4XS7gGN.json")
 
-root_dir = os.path.dirname(os.path.abspath(__file__))
+from PIL import Image
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMAGE_DIR = os.path.join(BASE_DIR, "myapp")
+
+Image_cat = Image.open(os.path.join(IMAGE_DIR, "cat101.jpg"))
+Image_huh = Image.open(os.path.join(IMAGE_DIR, "gasp101.jpg"))
+Image_petra = Image.open(os.path.join(IMAGE_DIR, "Petra101.jpg"))
+Image_George = Image.open(os.path.join(IMAGE_DIR, "Gt101.jpg"))
+Image_Taj = Image.open(os.path.join(IMAGE_DIR, "Tajteuer.jpg"))
+Image_UN1 = Image.open(os.path.join(IMAGE_DIR, "Unzzzs.jpg"))
+Image_machu101 = Image.open(os.path.join(IMAGE_DIR, "machu.jpg"))
+
+#root_dir = os.path.dirname(os.path.abspath(__file__))
 
 #Image_random = Image.open("images\istockphoto-918259136-612x612.jpg")
 ##Image_petra = Image.open(os.path.join(root_dir, "Petra101.jpg"))
 #Image_petra = Image.open("Petra101.jpg")
-Image_cat = Image.open("cat101.jpg")
-Image_huh = Image.open("gasp101.jpg")
-Image_quotes1 = Image.open("platoque101.jpg")
-Image_UN1 = Image.open ("Unzzzs.jpg")
-Image_UN = Image.open("thisUN.jpg")
-Image_Rom = Image.open("roman101.jpg")
-Image_Pyrami = Image.open("pyrami101.jpg")
-Image_Wall = Image.open("thewall101.jpg")
-Image_Strait = Image.open("malaccstra.jpg")
-Image_Travel1 = Image.open("mantravel.jpg")
-Image_Malacca = Image.open("melacca.jpg")
-Image_George = Image.open("Gt101.jpg")
-Image_Cat1 = Image.open("cat2101.jpg")
-Image_quote2 = Image.open("platoque102.jpg")
-Image_Taj = Image.open("Tajteuer.jpg")
-Image_machu101 = Image.open("machu.jpg")
+#Image_cat = Image.open("cat101.jpg")
+#Image_huh = Image.open("gasp101.jpg")
+#Image_quotes1 = Image.open("platoque101.jpg")
+#Image_UN1 = Image.open ("Unzzzs.jpg")
+#Image_UN = Image.open("thisUN.jpg")
+#Image_Rom = Image.open("roman101.jpg")
+#Image_Pyrami = Image.open("pyrami101.jpg")
+#Image_Wall = Image.open("thewall101.jpg")
+#Image_Strait = Image.open("malaccstra.jpg")
+#Image_Travel1 = Image.open("mantravel.jpg")
+#Image_Malacca = Image.open("melacca.jpg")
+#Image_George = Image.open("Gt101.jpg")
+#Image_Cat1 = Image.open("cat2101.jpg")
+#Image_quote2 = Image.open("platoque102.jpg")
+#Image_Taj = Image.open("Tajteuer.jpg")
+#Image_machu101 = Image.open("machu.jpg")
 ###############################
 if the_selected_main_bar == "Home":  
     selected_sub = option_menu(
@@ -240,6 +254,7 @@ if the_button:
 
 
     
+
 
 
 

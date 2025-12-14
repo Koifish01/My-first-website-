@@ -40,7 +40,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_DIR = os.path.join(BASE_DIR, "myapp")
 
-Image_cat = Image.open(os.path.join(IMAGE_DIR, "cat101.jpg"))
+Image_Cat1 = Image.open(os.path.join(IMAGE_DIR, "cat2101.jpg"))
 Image_huh = Image.open(os.path.join(IMAGE_DIR, "gasp101.jpg"))
 Image_petra = Image.open(os.path.join(IMAGE_DIR, "Petra101.jpg"))
 Image_George = Image.open(os.path.join(IMAGE_DIR, "Gt101.jpg"))
@@ -254,6 +254,7 @@ if the_button:
 
 
     
+
 
 
 

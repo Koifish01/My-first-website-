@@ -35,7 +35,7 @@ def lottie_loadurl(url):
     return r.json() 
 ####################################  IMAGE SECTION !!!!
 lottie_coding = lottie_loadurl("https://lottie.host/0ffaf8de-8f5e-406d-93ad-27a60744a513/SXc4XS7gGN.json")
-
+Image_petra = Image.open(os.path.join(IMAGE_DIR, "Petra101.jpg"))
 Image_cat = Image.open(os.path.join(IMAGE_DIR, "cat101.jpg"))
 Image_Cat1 = Image.open(os.path.join(IMAGE_DIR, "cat2101.jpg"))
 Image_huh = Image.open(os.path.join(IMAGE_DIR, "gasp101.jpg"))
@@ -147,7 +147,7 @@ elif the_selected_main_bar == "Contents":
         st.subheader("Location 1")
         if st.checkbox(""):
             st.subheader("Petra, Jordan") #photo to put (3)
-            st.image(Image_petra,width=150)
+            st.image(Image_petra, width=150)
             st.write("The city of Petra, capital of the Nabataean Arabs, is one of the most famous archaeological sites in the world, it is Located 240 km south of the capital Amman and 120 km north of the red sea town of Aqaba")
 
         st.subheader("Location 4")
@@ -264,6 +264,7 @@ if the_button:
 
 
     
+
 
 
 

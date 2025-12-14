@@ -4,9 +4,11 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_option_menu import option_menu
 import os
-from PIL import Image 
+from PIL import Image
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_DIR = os.path.join(BASE_DIR, "myapp")
+
 
 optionsez= ["Option 1","Option 2","Option 3"]
 
@@ -34,18 +36,26 @@ def lottie_loadurl(url):
 ####################################  IMAGE SECTION !!!!
 lottie_coding = lottie_loadurl("https://lottie.host/0ffaf8de-8f5e-406d-93ad-27a60744a513/SXc4XS7gGN.json")
 
-from PIL import Image
-import os
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGE_DIR = os.path.join(BASE_DIR, "myapp")
-
+Image_cat = Image.open(os.path.join(IMAGE_DIR, "cat101.jpg"))
 Image_Cat1 = Image.open(os.path.join(IMAGE_DIR, "cat2101.jpg"))
 Image_huh = Image.open(os.path.join(IMAGE_DIR, "gasp101.jpg"))
-Image_petra = Image.open(os.path.join(IMAGE_DIR, "Petra101.jpg"))
-Image_George = Image.open(os.path.join(IMAGE_DIR, "Gt101.jpg"))
-Image_Taj = Image.open(os.path.join(IMAGE_DIR, "Tajteuer.jpg"))
+
+Image_quotes1 = Image.open(os.path.join(IMAGE_DIR, "platoque101.jpg"))
+Image_quote2 = Image.open(os.path.join(IMAGE_DIR, "platoque102.jpg"))
+
 Image_UN1 = Image.open(os.path.join(IMAGE_DIR, "Unzzzs.jpg"))
+Image_UN = Image.open(os.path.join(IMAGE_DIR, "thisUN.jpg"))
+
+Image_Rom = Image.open(os.path.join(IMAGE_DIR, "roman101.jpg"))
+Image_Pyrami = Image.open(os.path.join(IMAGE_DIR, "pyrami101.jpg"))
+Image_Wall = Image.open(os.path.join(IMAGE_DIR, "thewall101.jpg"))
+Image_Strait = Image.open(os.path.join(IMAGE_DIR, "malaccstra.jpg"))
+
+Image_Travel1 = Image.open(os.path.join(IMAGE_DIR, "mantravel.jpg"))
+Image_Malacca = Image.open(os.path.join(IMAGE_DIR, "melacca.jpg"))
+Image_George = Image.open(os.path.join(IMAGE_DIR, "Gt101.jpg"))
+
+Image_Taj = Image.open(os.path.join(IMAGE_DIR, "Tajteuer.jpg"))
 Image_machu101 = Image.open(os.path.join(IMAGE_DIR, "machu.jpg"))
 
 #root_dir = os.path.dirname(os.path.abspath(__file__))
@@ -254,6 +264,7 @@ if the_button:
 
 
     
+
 
 
 
